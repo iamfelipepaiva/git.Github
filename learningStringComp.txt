@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char firstString[20];
+    char secondString[20];
+
+    fflush(stdin);
+    printf("Type anything: ");
+    fgets(firstString, sizeof(firstString), stdin);
+    firstString[strlen(firstString)-1] = '\0';
+
+    fflush(stdin);
+    printf("Type anything else: ");
+    fgets(secondString, sizeof(secondString), stdin);
+    secondString[strlen(secondString)-1] = '\0';
+
+    if(strcmp(firstString, secondString) == 0){
+        printf("The input info is the same.");
+    } else {
+        printf("They're different.");
+    }
+
+    return 0;
+}
+
+
